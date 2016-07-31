@@ -13,7 +13,8 @@ var CourseSchema = new Schema({
   dates:[{type:Date}],
   price:{online:Number, live:Number},
   curriculumSchedule: {},
-  frameworks: {}
+  frameworks: {},
+  event:{type:String}
 });
 
 module.exports = mongoose.model('course', CourseSchema);

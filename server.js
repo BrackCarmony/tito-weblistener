@@ -3,13 +3,14 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
+var bodyParser = require('body-parser');
 var config = require('./config/server');
 var register = require('./controllers/register');
 
-
+app.use(bodyParser.json());
 mongoose.connect(config.dbUri);
 
-app.get('/api/test', register.register);
+app.post('/api/test', register.register);
 
 
 app.listen(config.port, function(){
