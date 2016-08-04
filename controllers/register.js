@@ -11,7 +11,7 @@ var register = async(function(req, res, next){
   console.log("\n\n\nbody\n",req.body);
   console.log("\n\n\ntickets\n",req.body.tickets);
   console.log("\n\n\line_items\n",req.body.line_items);
-
+  var course await(Course.findOne({event:req.body.event.}))
 });
 
 module.exports = { register:register};
