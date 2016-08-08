@@ -10,9 +10,9 @@ var User = require('../models/user');
 
 var register = async(function(req, res, next){
   if (!req.body.tickets) return;
-  // console.log("\n\n\nbody\n",req.body);
-  // console.log("\n\n\ntickets\n",req.body.tickets);
-  // console.log("\n\n\line_items\n",req.body.line_items);
+  console.log("\n\n\nbody\n",req.body);
+  console.log("\n\n\ntickets\n",req.body.tickets);
+  console.log("\n\n\line_items\n",req.body.line_items);
   var course = await(Course.findOne({event:req.body.event.slug}))
   // console.log("\n\n\nCourse\n",course);
   req.body.tickets.forEach(function(ticket) {
