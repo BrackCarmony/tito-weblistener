@@ -9,6 +9,7 @@ var Course = require('../models/course');
 var User = require('../models/user');
 
 var register = async(function(req, res, next){
+  console.log("Hit");
   if (!req.body.tickets) return;
   console.log("\n\n\nbody\n",req.body);
   console.log("\n\n\ntickets\n",req.body.tickets);
